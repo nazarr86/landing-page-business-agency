@@ -73,7 +73,7 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 /*-------Watchers-------*/
 gulp.task('watch', function() {
     gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
-    gulp.watch('source/style/**/*.scss', gulp.series('sass'));
+    gulp.watch('source/styles/**/*.scss', gulp.series('sass'));
 });
 
 /*-------Default-------*/
