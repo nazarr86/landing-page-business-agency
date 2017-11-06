@@ -2728,6 +2728,27 @@ ol {
   max-width: 1024px;
   margin: auto; }
 
+.icon {
+  margin: auto auto 23px auto; }
+
+.icon-like {
+  background-image: url(../images/sprite.png);
+  background-position: -84px 0px;
+  width: 83px;
+  height: 79px; }
+
+.icon-book {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -81px;
+  width: 66px;
+  height: 79px; }
+
+.icon-message {
+  background-image: url(../images/sprite.png);
+  background-position: 0px 0px;
+  width: 84px;
+  height: 81px; }
+
 .button {
   display: inline-block;
   border-radius: 3px;
@@ -2745,6 +2766,29 @@ ol {
       background: #f9d775; }
   .button--text-uppercase {
     text-transform: uppercase; }
+
+.title {
+  margin-bottom: 65px;
+  text-align: center; }
+  .title__header {
+    margin: 0;
+    font-size: 2.25rem;
+    font-family: "helvetica-neue-bold";
+    line-height: 1; }
+  .title__text {
+    font-size: 1.25rem;
+    font-family: "helvetica-neue-light"; }
+  .title--with-bottom-line {
+    position: relative; }
+    .title--with-bottom-line:after {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      content: '';
+      bottom: -16px;
+      width: 47px;
+      height: 5px;
+      background: #424242; }
 
 .header__top {
   background: #f0f2f4;
@@ -2821,3 +2865,38 @@ ol {
   text-align: center;
   color: #fff;
   background: #ccc url(../images/hero-bg.jpg) center/cover no-repeat; }
+  .hero__about {
+    font-family: "helvetica-neue-bold";
+    font-size: 3rem;
+    line-height: 1; }
+  .hero__title {
+    margin-top: 0;
+    margin-bottom: 27px;
+    font-family: "helvetica-neue-light"; }
+  .hero .button--text-uppercase {
+    padding: 21px 41px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px; }
+
+.about {
+  padding: 99px 0 105px 0; }
+  .about__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 50px; }
+  .about__item {
+    width: 25%; }
+  .about__header {
+    margin: 0 0 12px 0;
+    font-size: 1.375rem;
+    font-family: "helvetica-neue-bold";
+    color: #424242; }
+  .about__description {
+    margin-top: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #5c5c5c; }
