@@ -2814,3 +2814,10 @@ ol {
       background: #424242; }
     .nav__link:last-child:after {
       display: none; }
+
+.hero {
+  min-height: 59px;
+  padding: 174px 0;
+  text-align: center;
+  color: #fff;
+  background: #ccc url(../images/hero-bg.jpg) center/cover no-repeat; }
