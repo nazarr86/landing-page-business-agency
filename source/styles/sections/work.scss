@@ -1,7 +1,12 @@
 .work {
-  padding: 100px 0;
+  padding: 110px 0;
   background-color: #de2b24;
   color: #fff;
+
+  @media (max-width: 985px) {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
 
   &__list {
     display: flex;
@@ -22,6 +27,8 @@
     font-weight: bold;
     color: #fff;
     background-color: #f35e59;
+    display: flex;
+    flex-direction: column;
 
     &--name {
       position: relative;

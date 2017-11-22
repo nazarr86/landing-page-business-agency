@@ -7,6 +7,9 @@ const rimraf      = require('rimraf');
 const rename      = require("gulp-rename");
 const sourcemaps  = require('gulp-sourcemaps');
 const prefix      = require('gulp-autoprefixer');
+const uglify      = require('gulp-uglify');
+const concat      = require('gulp-concat');
+
 
 /*-------SERVER-------*/
 gulp.task('server', function() {
@@ -35,6 +38,22 @@ gulp.task('sass', function() {
         .pipe(sass({outputStyles: 'compressed'}).on('error', sass.logError))
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest('build/css'));
+});
+
+/*------------JS---------------*/
+gulp.task('js', function() {
+    return gulp.src([
+        'source/js/init.js',
+        'source/js/validation.js',
+        'source/js/navigation.js',
+        'source/js/form.js',
+        'source/js/main.js'
+    ])
+        .pipe(sourcemaps.init())
+        .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('build/js'));
 });
 
 /*-------Sprites compile-------*/
@@ -74,11 +93,12 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 gulp.task('watch', function() {
     gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
     gulp.watch('source/styles/**/*.scss', gulp.series('sass'));
+    gulp.watch('source/js/**/*.js', gulp.series('js'));
 });
 
 /*-------Default-------*/
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('templates:compile', 'sass', 'sprite', 'copy'),
+    gulp.parallel('templates:compile', 'sass', 'js', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
 ));

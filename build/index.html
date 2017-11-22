@@ -17,7 +17,7 @@
       <div class="container">
         <div class="header__bottom">
           <div class="logo"><img class="logo__picture" src="images/logo.png" alt="Logo"></div>
-          <nav class="nav"><a class="nav__link nav__link--active" href="#">Home</a><a class="nav__link" href="#">About us</a><a class="nav__link" href="#">Our Approch</a><a class="nav__link" href="#">Our Work</a>
+          <nav class="nav"><a class="nav__link nav__link--active" href="#" data-link="header">Home</a><a class="nav__link" href="#" data-link="about">About us</a><a class="nav__link" href="#" data-link="approch">Our Approch</a><a class="nav__link" href="#" data-link="work">Our Work</a>
           </nav><a class="button header__button button--red" href="#">Free Consultation</a>
         </div>
       </div>
@@ -54,7 +54,7 @@
     <section class="approch">
       <div class="container">
         <div class="title title--with-bottom-line">
-          <h2 class="title title__header">Our Approch</h2>
+          <h2 class="title__header">Our Approch</h2>
           <div class="title__text">Check Our approches step by step</div>
         </div>
         <ul class="approch__list">
@@ -130,21 +130,21 @@
     <section class="form-section">
       <div class="container">
         <div class="title">
-          <h2 class="title title__header">Get Your Free Facebook Analysits Now</h2>
+          <h2 class="title__header">Get Your Free Facebook Analysits Now</h2>
           <div class="title__text">Enter your details below</div>
         </div>
-        <div class="btn-down"><a class="arrow-down"><i class="fa fa-angle-down"></i></a></div>
+        <div class="btn-down"><a class="arrow-down" href="form.html" target="_blank"><i class="fa fa-angle-down"></i></a></div>
         <div class="form-container is-hidden">
           <form class="form" method="post" action="#">
-            <button class="form__close-button" type="button">X</button>
+            <button class="form__close-button" type="button">x</button>
             <div class="form__text">
               Sit down with our experts to receive a free customized marketing for your business "Learn How It Use Google and Facebook to get 500% of or more"
               
             </div>
             <div class="form__fields">
-              <input class="form__input" type="text" placeholder="Your Name">
-              <input class="form__input" type="text" placeholder="Contact Number">
-              <input class="form__input" type="text" placeholder="Contact Name">
+              <input class="form__input" type="text" placeholder="Your Name" data-valid="required">
+              <input class="form__input" type="email" placeholder="Your Email" data-valid="required" data-email>
+              <input class="form__input" type="text" placeholder="Contact Number" data-valid="required" data-number>
             </div>
             <button class="button button--red button--text-uppercase" type="submit">Submit now</button>
           </form>
@@ -170,5 +170,6 @@
         <div class="footer__copy">Cssauthor.com &copy; All Rights Reserved</div>
       </div>
     </footer>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
